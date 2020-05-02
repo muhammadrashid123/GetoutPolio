@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "388419220801",
+    "firebase_url": "https://get-out-polio.firebaseio.com",
+    "project_id": "get-out-polio",
+    "storage_bucket": "get-out-polio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388419220801:android:9ed740c90a6b2e9c689dc0",
+        "android_client_info": {
+          "package_name": "com.example.getoutpolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388419220801-ut2cvhbtve9vdpckmdduqlqfnjciiec6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.getoutpolio",
+            "certificate_hash": "e0097a984786befa92a24e9a58fb48d090545f2a"
+          }
+        },
+        {
+          "client_id": "388419220801-c2ldh98hldiv3hikva9eqctr3ggumr6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7GVtxmxFyJwfx-X74E1N2acbWu4w6eus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388419220801-c2ldh98hldiv3hikva9eqctr3ggumr6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
