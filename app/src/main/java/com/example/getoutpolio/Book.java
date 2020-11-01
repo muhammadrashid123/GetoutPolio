@@ -1,6 +1,9 @@
 package com.example.getoutpolio;
 
-public class Book {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Book implements Parcelable {
 
     private String Title;
     private String Category;
@@ -16,6 +19,25 @@ public class Book {
         Descripton = descripton;
         Thembail = thembail;
     }
+
+    protected Book(Parcel in) {
+        Title = in.readString();
+        Category = in.readString();
+        Descripton = in.readString();
+        Thembail = in.readInt();
+    }
+
+    public static final Creator<Book> CREATOR = new Creator<Book>() {
+        @Override
+        public Book createFromParcel(Parcel in) {
+            return new Book(in);
+        }
+
+        @Override
+        public Book[] newArray(int size) {
+            return new Book[size];
+        }
+    };
 
     public String getTitle() {
         return Title;
@@ -47,5 +69,18 @@ public class Book {
 
     public void setThembail(int thembail) {
         Thembail = thembail;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(Title);
+        dest.writeString(Category);
+        dest.writeString(Descripton);
+        dest.writeInt(Thembail);
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Blocks"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Block"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:id="@+id/enter_blocks_dialog_id"></EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <Button
+            android:id="@+id/btn_dialog_blocks_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_weight="1"></Button>
+        <Button
+            android:id="@+id/btn_dialog_blocks_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_weight="1"></Button>
+    </LinearLayout>
+
+</LinearLayout>

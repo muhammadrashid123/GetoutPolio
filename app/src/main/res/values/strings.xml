@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GetoutPolio</string>
+    <string name="app_name">Get Out Polio</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -7,4 +7,23 @@
     <string name="close">close</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_areas">AddAreasActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_samnabad_blocks">SamnabadBlocksActivity</string>
+    <string name="title_activity_samnabad_block_a_streets">SamnabadBlockAStreetsActivity</string>
+    <string name="title_activity_samnabad_block_a_street01_houses">
+        SamnabadBlockAStreet01HousesActivity
+    </string>
+    <string name="title_activity_samnbad_block_a_street01_house02">
+        SamnbadBlockAStreet01House02Activity
+    </string>
+    <string name="title_activity_team_add_by_admin">Teams</string>
+    <string name="title_activity_team01_members">Members</string>
 </resources>

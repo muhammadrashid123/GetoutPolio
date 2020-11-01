@@ -1,6 +1,7 @@
 package Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.getoutpolio.Book;
+import com.example.getoutpolio.ForgotPasswordActivity;
+import com.example.getoutpolio.LoginActivity;
 import com.example.getoutpolio.R;
 import com.example.getoutpolio.RecyclerviewAdapter;
 
@@ -52,12 +55,12 @@ RecyclerviewAdapter mAdapter;
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(Context,2);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
         lstBook=new ArrayList<>();
-        lstBook.add(new Book("The Title1","category book","descripton book",R.drawable.img1));
-        lstBook.add(new Book("The Title2","category book","descripton book",R.drawable.img2));
-        lstBook.add(new Book("The Title3","category book","descripton book",R.drawable.img3));
-        lstBook.add(new Book("The Title4","category book","descripton book",R.drawable.img4));
-        lstBook.add(new Book("The Title5","category book","descripton book",R.drawable.img5));
-        lstBook.add(new Book("The Titl6","category book","descripton book",R.drawable.img6));
+        lstBook.add(new Book("Area","category book","descripton book",R.drawable.area2));
+        lstBook.add(new Book("Maps","category book","descripton book",R.drawable.maps));
+        lstBook.add(new Book("Team","category book","descripton book",R.drawable.team3));
+        lstBook.add(new Book("Registration","category book","descripton book",R.drawable.polio_registraion));
+        lstBook.add(new Book("Cooling","category book","descripton book",R.drawable.cooling));
+        lstBook.add(new Book("Cooling","category book","descripton book",R.drawable.cooling2));
         lstBook.add(new Book("The Title1","category book","descripton book",R.drawable.img1));
         lstBook.add(new Book("The Title2","category book","descripton book",R.drawable.img2));
         lstBook.add(new Book("The Title3","category book","descripton book",R.drawable.img3));
@@ -69,6 +72,7 @@ RecyclerviewAdapter mAdapter;
 
         RecyclerviewAdapter myAdapter = new RecyclerviewAdapter(Context,lstBook);
         mRecyclerView.setAdapter(myAdapter);
+
         return root;
 
 

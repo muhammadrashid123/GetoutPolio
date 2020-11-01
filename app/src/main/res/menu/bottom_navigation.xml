@@ -8,10 +8,10 @@
         android:id="@+id/nav_about"
         android:icon="@drawable/ic_person_black_24dp"
         android:title="About"/>
-    <item
-        android:id="@+id/nav_search"
-        android:icon="@drawable/ic_search_black_24dp"
-        android:title="Search"/>
+<!--    <item-->
+<!--        android:id="@+id/nav_search"-->
+<!--        android:icon="@drawable/ic_search_black_24dp"-->
+<!--        android:title="Search"/>-->
 
 
 </menu>

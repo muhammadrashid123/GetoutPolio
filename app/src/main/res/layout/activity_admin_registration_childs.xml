@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminRegistrationChildsActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="127dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/logo2_user"
+        android:id="@+id/team_image_Id">
+    </ImageView>
+    <EditText
+        android:id="@+id/child_id"
+        android:layout_below="@id/team_image_Id"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#D4D8DC"
+        android:drawableLeft="@drawable/ic_user"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:inputType="number"
+        android:hint="Enter Child id">
+    </EditText>
+    <EditText
+        android:id="@+id/Reg_name_id"
+        android:layout_below="@id/child_id"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#D4D8DC"
+        android:drawableLeft="@drawable/ic_user"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:inputType="text"
+        android:hint="Enter Name">
+    </EditText>
+    <EditText
+        android:id="@+id/Father_name_id"
+        android:layout_below="@id/Reg_name_id"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#D4D8DC"
+        android:drawableLeft="@drawable/ic_user"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:inputType="text"
+        android:hint="Enter Father Name">
+    </EditText>
+    <EditText
+        android:id="@+id/Father_CNIC_no_id"
+        android:layout_below="@id/Father_name_id"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#D4D8DC"
+        android:drawableLeft="@drawable/ic_user"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:inputType="number"
+        android:hint="Enter Father CNIC NO">
+    </EditText>
+    <EditText
+        android:id="@+id/age__id"
+        android:layout_below="@id/Father_CNIC_no_id"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#D4D8DC"
+        android:drawableLeft="@drawable/ic_user"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:inputType="number"
+        android:hint="Enter Child Age">
+    </EditText>
+    <EditText
+        android:id="@+id/address_reg_id"
+        android:layout_below="@id/age__id"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#D4D8DC"
+        android:drawableLeft="@drawable/ic_password"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:inputType="text"
+        android:hint="Enter Address">
+    </EditText>
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_below="@id/address_reg_id"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_border"
+        android:backgroundTint="#15C6B6"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"
+        android:text="Register"
+        android:layout_marginLeft="10dp">
+    </Button>
+
+    <ProgressBar
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/waitProgressBar"
+        android:visibility="invisible"></ProgressBar>
+
+
+</RelativeLayout>

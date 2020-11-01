@@ -2,14 +2,86 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.getoutpolio">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/applogo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ForgotPasswordActivity"></activity>
+        <activity android:name=".RecordsByAdminActivity"></activity>
+        <activity android:name=".GenerateSecurityThreatsActivity" />
+        <activity android:name=".CampaignDatesShowUserActivity" />
+        <activity android:name=".Team01UserTaskActivity" />
+        <activity android:name=".Team01MembersByUserActivity" />
+        <activity android:name=".Team01ByUserActivity" />
+        <activity android:name=".SamnabadBlocksUserActivity" />
+        <activity android:name=".RegistredTeamsInfoActivity" />
+        <activity android:name=".RegistredAreasActivity" />
+        <activity android:name=".CampaignDatesActivity" />
+        <activity
+            android:name=".Team01MembersActivity"
+            android:label="@string/title_activity_team01_members"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TeamAddByAdminActivity"
+            android:label="@string/title_activity_team_add_by_admin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AdminRegistrationChildsActivity" />
+        <activity
+            android:name=".SamnbadBlockAStreet01House02Activity"
+            android:label="@string/title_activity_samnbad_block_a_street01_house02"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SamnabadBlockAStreet01HousesActivity"
+            android:label="@string/title_activity_samnabad_block_a_street01_houses"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SamnabadBlockAStreetsActivity"
+            android:label="@string/title_activity_samnabad_block_a_streets"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SamnabadBlocksActivity"
+            android:label="@string/title_activity_samnabad_blocks"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddAreasActivity"
+            android:label="@string/title_activity_add_areas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SamnabadStreet01House01" />
+        <activity android:name=".SamnabadStreet01Houses" />
+        <activity android:name=".SamnabadStreetNo" />
+        <activity android:name=".AssignTaskActivity" />
+        <activity android:name=".SearchTeamInfoActivity" />
+        <activity android:name=".EditTeamInfoActivity" />
+        <activity android:name=".DeleteTeamInfoActivity" />
+        <activity android:name=".RegistredTeams" />
+        <activity android:name=".TeamRegistration" />
+        <activity android:name=".AdArea" />
+        <activity android:name=".AdminDashboard" />
+        <activity android:name=".SamnabadHouses" />
+        <activity android:name=".TaskActivity" />
+        <activity android:name=".RegistredChilds" />
+        <activity android:name=".RegistredChildsInfoActivity" />
+        <activity android:name=".DeleteChildsInfoActivity" />
+        <activity android:name=".EditChildsActivity" />
+        <activity android:name=".AreaActivity" />
+        <activity android:name=".AreasActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBSV5xAcHE8v7UPKw-Z9OcKdiLp3F3UkF4" />
+
+        <activity android:name=".MapsActivity" />
+        <activity android:name=".SearchChildsInfoActivity" />
+        <activity android:name=".RegistraionActivity" />
+        <activity android:name=".TeamApp" />
+        <activity android:name=".TeamActivity" />
+        <activity android:name=".Book_Acitivity" />
+        <activity android:name=".ForgotPasswordActivity" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/login" />

@@ -7,17 +7,17 @@
         android:icon="@drawable/ic_home_black_24dp"
         />
 
-    <item
-        android:title="Profile"
-        android:id="@+id/item_profile"
-        android:icon="@drawable/ic_settings_black_24dp"/>
+<!--    <item-->
+<!--        android:title="Profile"-->
+<!--        android:id="@+id/item_profile"-->
+<!--        android:icon="@drawable/ic_settings_black_24dp"/>-->
     <item
         android:title="Complain"
         android:id="@+id/item_complain"
         android:icon="@drawable/ic_comment_black_24dp"/>
     <item
         android:title="Contact us"
-        android:id="@+id/item_aboutUs"
+        android:id="@+id/item_ContactUs"
         android:icon="@drawable/ic_contact_mail_black_24dp"/>
     <item
         android:title="Change Password"

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".SamnabadStreet01House01">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Checkbox"
+        android:textStyle="bold"
+        android:textSize="20sp"></TextView>
+    <CheckBox
+        android:id="@+id/checkbox_child_1_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Muhammad Aleem"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+    <CheckBox
+        android:id="@+id/checkbox_child_2_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Muhammad Taha"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"/>
+    <CheckBox
+        android:id="@+id/checkbox_child_3_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mutafa"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_submit"></Button>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select checkbox"
+        android:textSize="20sp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/output_id"
+        android:textSize="40sp"
+        android:layout_marginTop="5dp"/>
+
+
+
+
+</LinearLayout>

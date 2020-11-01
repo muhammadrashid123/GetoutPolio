@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragment.ComplainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:background="#FFCDD2"
+      android:layout_height="match_parent">
+      <EditText
+          android:id="@+id/name_complain_id"
+          android:layout_width="290dp"
+          android:layout_height="40dp"
+          android:background="@drawable/border"
+          android:backgroundTint="#D4D8DC"
+          android:drawableLeft="@drawable/ic_user"
+          android:layout_alignParentTop="true"
+          android:layout_marginLeft="57dp"
+          android:layout_marginTop="90dp"
+          android:maxLength="20"
+          android:maxLines="1"
+          android:inputType="textPersonName"
+          android:hint="Enter Your Name"/>
+      <EditText
+          android:id="@+id/email_complain_Id"
+          android:layout_below="@id/name_complain_id"
+          android:layout_width="290dp"
+          android:layout_height="40dp"
+          android:background="@drawable/border"
+          android:backgroundTint="#D4D8DC"
+          android:drawableLeft="@drawable/ic_user"
+          android:layout_marginTop="20dp"
+          android:paddingLeft="2dp"
+          android:layout_centerInParent="true"
+          android:maxLength="30"
+          android:maxLines="1"
+          android:inputType="textEmailAddress"
+          android:hint="Enter Your Email">
+      </EditText>
+      <EditText
+          android:id="@+id/compain_text_Id"
+          android:layout_below="@id/email_complain_Id"
+          android:layout_width="290dp"
+          android:layout_height="100dp"
+          android:background="@drawable/border"
+          android:backgroundTint="#D4D8DC"
+          android:layout_marginTop="20dp"
+          android:paddingLeft="5dp"
+          android:paddingBottom="70dp"
+          android:layout_centerInParent="true"
+          android:maxLength="30"
+          android:maxLines="5"
+          android:inputType="text"
+          android:hint="Enter Your Complain">
+      </EditText>
+      <Button
+          android:id="@+id/button_complain_id"
+          android:layout_below="@id/compain_text_Id"
+          android:layout_width="170dp"
+          android:layout_height="40dp"
+          android:layout_marginRight="80dp"
+          android:layout_centerInParent="true"
+          android:background="@drawable/button_border"
+          android:backgroundTint="#15C6B6"
+          android:textColor="#ffffff"
+          android:textStyle="bold"
+          android:layout_marginTop="20dp"
+          android:text="Submit"
+          android:layout_marginLeft="10dp">
+      </Button>
+
+      <ProgressBar
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_centerInParent="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginTop="10dp"
+          android:id="@+id/waitProgressBar"
+          android:visibility="invisible"
+          />
+  </RelativeLayout>
+
+</FrameLayout>

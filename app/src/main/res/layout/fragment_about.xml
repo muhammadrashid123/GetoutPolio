@@ -5,9 +5,28 @@
     tools:context="Fragment.AboutFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logofinallizedtransparent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/aboutImageIV_id"
+        ></ImageView>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+        android:layout_height="wrap_content"
+        android:id="@+id/about_text_id"
+        android:layout_below="@id/aboutImageIV_id"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+       android:textSize="20dp"
+        android:text="Application enables government and parents to vaccine their children. Many of the parents aren’t acknowledge form the drive of polio. Through this application we can mark, add and generate the progress report of the team. This application and hardware component can also minimize the cost of the government on the campaign."
+        ></TextView>
+    </RelativeLayout>
 </FrameLayout>

@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,6 +26,10 @@ import Fragment.AboutFragment;
 import Fragment.HomeFragment;
 import Fragment.SearchFragment;
 import Fragment.ChangePassword;
+import Fragment.DashboardFragment;
+import Fragment.MapsFragment;
+import Fragment.ComplainFragment;
+import Fragment.ContactUsFragment;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -32,19 +37,26 @@ public class MainActivity extends AppCompatActivity {
     SearchFragment searchFragment;
     AboutFragment aboutFragment;
     ChangePassword changePassword;
+    DashboardFragment dashboardFragment;
+    MapsFragment mapsFragment;
+    ComplainFragment complainFragment;
+    ContactUsFragment contactUsFragment;
     private FirebaseAuth firebaseAuth;
-
-
     private NavigationView objectNavigationView;
     private DrawerLayout objectDrawerLayout;
-
     private Toolbar objectToolbar;
     View view;
     List<Book> lstBook;
+
+
+    ImageView objMaps;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        objMaps=findViewById(R.id.maps_item_id);
+
 
 
 
@@ -52,18 +64,35 @@ public class MainActivity extends AppCompatActivity {
         connectJAVAToXML();
         try {
             homeFragment=new HomeFragment();
+            dashboardFragment=new DashboardFragment();
             aboutFragment=new AboutFragment();
             searchFragment=new SearchFragment();
             changePassword=new ChangePassword();
-            changeFragment(homeFragment);
+            mapsFragment=new MapsFragment();
+            changeFragment(dashboardFragment);
+            complainFragment=new ComplainFragment();
+            contactUsFragment =new ContactUsFragment();
             bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+            objMaps=findViewById(R.id.maps_item_id);
             bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     switch (item.getItemId()) {
                         case R.id.nav_hame: {
 
-                            changeFragment(homeFragment);
+                            changeFragment(dashboardFragment);
+                            return true;
+                        }
+                        case R.id.item_home:
+                        {
+                            changeFragment(dashboardFragment);
+                            return true;
+                        }
+
+                        case R.id.maps_item_id: {
+
+                            changeFragment(aboutFragment);
                             return true;
                         }
                         case R.id.nav_about: {
@@ -71,14 +100,20 @@ public class MainActivity extends AppCompatActivity {
                             changeFragment(aboutFragment);
                             return true;
                         }
-                        case R.id.nav_search: {
-
-                            changeFragment(searchFragment);
-                            return true;
-                        }
+//                        case R.id.nav_search: {
+//
+//                            changeFragment(searchFragment);
+//                            return true;
+//                        }
                         case R.id.change_password_id:{
                             changeFragment(changePassword);
                             return true;
+                        }
+                        case R.id.item_complain:{
+                            changeFragment(complainFragment);
+                        }
+                        case R.id.item_ContactUs:{
+                            changeFragment(contactUsFragment);
                         }
                         default: {
                             return false;
@@ -118,24 +153,26 @@ public class MainActivity extends AppCompatActivity {
                     if(item.getItemId()==R.id.item_home)
                     {
                         Toast.makeText(MainActivity.this, "Home is clicked", Toast.LENGTH_SHORT).show();
+                        changeFragment(dashboardFragment);
+
                         closeMyDrawer();
                         return true;
                     }
-                    else if(item.getItemId()==R.id.item_profile)
-                    {
-                        Toast.makeText(MainActivity.this, "Profile is clicked", Toast.LENGTH_SHORT).show();
-                        closeMyDrawer();
-                        return true;
-                    }
+//                    else if(item.getItemId()==R.id.item_profile)
+//                    {
+//                        Toast.makeText(MainActivity.this, "Profile is clicked", Toast.LENGTH_SHORT).show();
+//                        closeMyDrawer();
+//                        return true;
+//                    }
                     else if(item.getItemId()==R.id.item_complain)
                     {
-                        Toast.makeText(MainActivity.this, "compiain is clicked", Toast.LENGTH_SHORT).show();
+                        changeFragment(complainFragment);
                         closeMyDrawer();
                         return true;
                     }
-                    else if(item.getItemId()==R.id.item_aboutUs)
+                    else if(item.getItemId()==R.id.item_ContactUs)
                     {
-                        Toast.makeText(MainActivity.this, "About us is clicked", Toast.LENGTH_SHORT).show();
+                        changeFragment(contactUsFragment);
                         closeMyDrawer();
                         return true;
                     }
@@ -180,8 +217,6 @@ public class MainActivity extends AppCompatActivity {
     {
         try
         {
-            //Step 1 you will create object of ACTION BAR DRAWER TOGGLE
-            //with 5 parameters
             ActionBarDrawerToggle objectActionBarDrawerToggle=
                     new ActionBarDrawerToggle(
                             this,
@@ -191,10 +226,9 @@ public class MainActivity extends AppCompatActivity {
                             R.string.close
                     );
 
-            //Step 2: set color for ham burger icon
             objectActionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorPrimary));
 
-            //Step 3:
+
             objectActionBarDrawerToggle.syncState();
         }
         catch (Exception e)
@@ -202,6 +236,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "setUpHamBurgerIcon:"+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
 
 
 

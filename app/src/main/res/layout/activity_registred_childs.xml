@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistredChilds">
+    <TextView
+        android:id="@+id/registred_title_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Registred Childs Info"
+        android:textColor="#ce3232"
+        android:textSize="40sp"
+        android:typeface="serif" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_reg_Btn_id"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/button_border"
+        android:backgroundTint="#15C6B6"
+        android:textColor="#ffffff"
+        android:text="Search Info"
+        android:layout_below="@id/registred_title_id"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_reg_Btn_id"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/button_border"
+        android:backgroundTint="#15C6B6"
+        android:textColor="#ffffff"
+        android:text="Edit Info"
+        android:layout_below="@id/search_reg_Btn_id"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_reg_Btn_id"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/button_border"
+        android:backgroundTint="#15C6B6"
+        android:textColor="#ffffff"
+        android:text="Delete Info"
+        android:layout_below="@id/edit_reg_Btn_id"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>

@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import Fragment.HomeFragment;
-
 public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapter.MyViewHolder> {
 
     private Context mContext;
@@ -40,6 +38,19 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
     holder.tv_book_title.setText(mData.get(position).getTitle());
     holder.img_book_thembail.setImageResource(mData.get(position).getThembail());;
+
+      holder.cardView.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+//              Intent intent=new Intent(mContext,Book_Acitivity.class);
+//              intent.putExtra("Title",mData.get(position).getTitle());
+//              intent.putExtra("Description",mData.get(position).getDescripton());
+//              intent.putExtra("Thembail",mData.get(position).getThembail());
+//              mContext.startActivity(intent);
+              Intent intent =new Intent(mContext,Book_Acitivity.class);
+              mContext.startActivity(intent);
+          }
+      });
     }
 
     @Override
@@ -47,17 +58,23 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         return mData.size();
     }
 
-     class MyViewHolder extends RecyclerView.ViewHolder{
+     class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView tv_book_title;
         ImageView img_book_thembail;
+        CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_book_title=(TextView) itemView.findViewById(R.id.book_title_id);
             img_book_thembail=(ImageView) itemView.findViewById(R.id.book_img_id);
-
+            cardView=(CardView) itemView.findViewById(R.id.cardView_id);
         }
-    }
+
+
+
+
+
+     }
 
 }
